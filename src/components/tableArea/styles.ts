@@ -6,10 +6,14 @@ export const Table = styled.table`
     padding: 20px;
     box-shadow: 0 0 5px #CCC;
     border-radius: 10px;
+    margin-top: 20px
 
 `;
-
-export const TableHeadColumn = styled.th`
-
+                                        // tipando o nossa prop de estilos e 
+                                        // manipulando ela dentro deste escopo
+export const TableHeadColumn = styled.th<{width?: number}>`
+    width:${props => props.width ? `${props.width}px` : 'auto'}
+    padding: 10px 0;
+    text-align: left;
 
 `;

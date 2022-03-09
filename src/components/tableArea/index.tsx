@@ -7,10 +7,10 @@ export function TableArea () {
             <thead>
                 {/* colunas */}
                 <tr>
-                    <C.TableHeadColumn>Data</C.TableHeadColumn>
-                    <C.TableHeadColumn>Categoria</C.TableHeadColumn>
+                    <C.TableHeadColumn width={100}>Data</C.TableHeadColumn>
+                    <C.TableHeadColumn width={130}>Categoria</C.TableHeadColumn>
                     <C.TableHeadColumn>Titulo</C.TableHeadColumn>
-                    <C.TableHeadColumn>Valor</C.TableHeadColumn>
+                    <C.TableHeadColumn width={150}>Valor</C.TableHeadColumn>
                 </tr>
             </thead>
             <tbody>
