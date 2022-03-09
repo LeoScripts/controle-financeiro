@@ -5,7 +5,7 @@ import { Category } from "./styles/Category";
 import { categories } from "./data/categories";
 import { items } from "./data/items";
 import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter'
-import { TableArea } from "./components/tableArea";
+import { TableArea } from "./components/TableItem";
 
 
 
@@ -31,7 +31,7 @@ export function App() {
         {/* area de incersão de dados */}
 
         {/* tabela de intens */}
-        <TableArea />
+        <TableArea  list={filteredList}/>
       </C.Body>
     </C.Container>
   );

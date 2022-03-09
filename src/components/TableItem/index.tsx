@@ -1,6 +1,12 @@
 import * as C from './styles';
+import { Item } from '../../types/Item'
 
-export function TableArea () {
+
+type Props = {
+    list: Item[]
+}
+
+export function TableArea ({ list }: Props) {
     return(
         <C.Table>
             {/* linhas de cabeçario */}
@@ -14,7 +20,14 @@ export function TableArea () {
                 </tr>
             </thead>
             <tbody>
-
+                {list.map((item, index) => {
+                    <tr key={index}>
+                        <td></td>
+                        <td></td>
+                        <td>{item.title}</td>
+                        <td></td>
+                    </tr>
+                })}
             </tbody>
         </C.Table>
     );
