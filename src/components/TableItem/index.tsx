@@ -1,35 +1,19 @@
-import * as C from './styles';
-import { Item } from '../../types/Item'
+import * as C from './styles'
+import { Item } from "../../types/Item";
+import { formatDate } from '../../helpers/dateFilter'
 
 
 type Props = {
-    list: Item[]
+    item: Item
 }
 
-export function TableArea ({ list }: Props) {
-    return(
-        <C.Table>
-            {/* linhas de cabeçario */}
-            <thead>
-                {/* colunas */}
-                <tr>
-                    <C.TableHeadColumn width={100}>Data</C.TableHeadColumn>
-                    <C.TableHeadColumn width={130}>Categoria</C.TableHeadColumn>
-                    <C.TableHeadColumn>Titulo</C.TableHeadColumn>
-                    <C.TableHeadColumn width={150}>Valor</C.TableHeadColumn>
-                </tr>
-            </thead>
-            <tbody>
-                {list.map((item, index) => {
-                    <tr key={index}>
-                        <td></td>
-                        <td></td>
-                        <td>{item.title}</td>
-                        <td></td>
-                    </tr>
-                })}
-            </tbody>
-        </C.Table>
-    );
-
-};
+export function TableItem({item}: Props) {
+  return (
+    <C.TableLine>
+        <C.TableColumn>{formatDate(item.date)}</C.TableColumn>
+        <C.TableColumn>{item.category}</C.TableColumn>
+        <C.TableColumn>{item.title}</C.TableColumn>
+        <C.TableColumn>{item.value}</C.TableColumn>
+    </C.TableLine>
+  );
+}
