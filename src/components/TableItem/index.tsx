@@ -25,9 +25,11 @@ export function TableItem({item}: Props) {
         </C.TableColumn>
         <C.TableColumn>{item.title}</C.TableColumn>
 
-        {/* estwe item estava dentro da prop mas {categories[item.category].expense ? 'red' : 'green'}  mais foi removido temporariament */}
         <C.TableColumn color=''>
-          R${item.value}
+        {/* estwe item estava dentro da prop mas {categories[item.category].expense ? 'red' : 'green'}  mais foi removido temporariament */}
+          <C.Value>
+            R${item.value}
+          </C.Value>
         </C.TableColumn>
     </C.TableLine>
   );
