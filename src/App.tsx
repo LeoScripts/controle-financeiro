@@ -28,7 +28,7 @@ export function App() {
 
       <C.Body>
         {/* area de informações */}
-        <InfoArea />
+        <InfoArea currentMonth={currentMonth} />
 
         {/* area de incersão de dados */}
 
