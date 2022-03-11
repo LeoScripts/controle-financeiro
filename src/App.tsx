@@ -20,6 +20,12 @@ export function App() {
     setFilteredList(filterListByMonth(list, currentMonth));
   }, [list,currentMonth])
 
+
+  // funçaõ que troca o estado do mes
+  const handleMonthChange = (newMonth: string) => {
+    setCurrentMonth(newMonth);
+  }
+
   return (
     <C.Container>
       <C.Header>
@@ -28,7 +34,10 @@ export function App() {
 
       <C.Body>
         {/* area de informações */}
-        <InfoArea currentMonth={currentMonth} />
+        <InfoArea 
+          currentMonth={currentMonth}
+          onMonthChange={handleMonthChange} 
+        />
 
         {/* area de incersão de dados */}
 
