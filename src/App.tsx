@@ -7,6 +7,7 @@ import { categories } from "./data/categories";
 import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter'
 import { TableArea } from "./components/TableArea";
 import { InfoArea } from "./components/InfoArea";
+import { InputArea } from "./components/InputArea";
 
 
 
@@ -44,6 +45,14 @@ const App = () => {
     setCurrentMonth(newMonth);
   }
 
+
+  // funçao que adiciona o item
+  const handleAddItem = (item: Item) => {
+    let newList = [...list];
+    newList.push(item);
+    setList(newList);
+  }
+
   return (
     <C.Container>
       <C.Header>
@@ -60,9 +69,11 @@ const App = () => {
         />
 
         {/* area de incersão de dados */}
+        <InputArea onAdd={handleAddItem}/>
 
         {/* tabela de intens */}
-        <TableArea  list={filteredList}/>
+        {/* <TableArea  list={filteredList}/> */}
+        <TableArea  list={list}/>
       </C.Body>
     </C.Container>
   );

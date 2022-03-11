@@ -7,9 +7,9 @@ type Props = {
     list: Item[]
 }
 
-export const TableArea = ({ list }: Props) => {
-
-    // console.log(list)
+export const  TableArea = ({ list }: Props) => {
+    const resultado = list.map(item => item.title)
+    console.log(resultado)
     return(
         <C.Table>
             {/* linhas de cabeçario */}
