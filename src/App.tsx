@@ -6,6 +6,7 @@ import { categories } from "./data/categories";
 import { items } from "./data/items";
 import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter'
 import { TableArea } from "./components/TableArea";
+import { InfoArea } from "./components/InfoArea";
 
 
 
@@ -27,6 +28,7 @@ export function App() {
 
       <C.Body>
         {/* area de informações */}
+        <InfoArea />
 
         {/* area de incersão de dados */}
 
