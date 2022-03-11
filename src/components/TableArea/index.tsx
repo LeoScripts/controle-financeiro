@@ -4,10 +4,10 @@ import { TableItem } from '../TableItem';
 
 
 type Props = {
-    list: Item[];
+    list: Item[]
 }
 
-export function TableArea ({ list }: Props) {
+export const TableArea = ({ list }: Props) => {
 
     // console.log(list)
     return(

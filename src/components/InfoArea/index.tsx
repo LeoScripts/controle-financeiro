@@ -16,7 +16,15 @@ export const InfoArea = ({currentMonth, onMonthChange}: Props) => {
     }   
 
     const handleNextMonth = () => {
+        // faz o a separação
+        let [year, month] = currentMonth.split('-');
+         // carrega o date                  
+        let currentDate = new Date(parseInt(year), parseInt(month) - 1, 1);
+        // muda o mes                               // esta e a unica coisa que muda
+        currentDate.setMonth( currentDate.getMonth() + 1 );
 
+        // carrega o mes e exibe na tela atraves da minha prop
+        onMonthChange(`${currentDate.getFullYear}-${currentDate.getMonth() + 1}`);
     }
 
     return(

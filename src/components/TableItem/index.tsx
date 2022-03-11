@@ -10,24 +10,20 @@ type Props = {
 
 
 
-export function TableItem({item}: Props) {
+export const TableItem = ({item}: Props) => {
 
   return (
     <C.TableLine>
         <C.TableColumn>{formatDate(item.date)}</C.TableColumn>
         <C.TableColumn>
-          {/* esta props color recebe o mesmo {categories[item.category].title}  so que apresetou erro 
-            e foi removido temporariament
-           */}
-          <C.Category color=''>
-            {/* {categories[item.category].title} */}
+          <C.Category color={categories[item.category].title}>
+            {categories[item.category].title}
           </C.Category>
         </C.TableColumn>
         <C.TableColumn>{item.title}</C.TableColumn>
 
-        <C.TableColumn color=''>
-        {/* estwe item estava dentro da prop mas {categories[item.category].expense ? 'red' : 'green'}  mais foi removido temporariament */}
-          <C.Value>
+        <C.TableColumn>
+          <C.Value color={categories[item.category].expense ? 'red' : 'green'}>
             R${item.value}
           </C.Value>
         </C.TableColumn>
