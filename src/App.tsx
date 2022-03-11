@@ -22,6 +22,22 @@ const App = () => {
     setFilteredList(filterListByMonth(list, currentMonth));
   }, [list,currentMonth])
 
+  useState(() => {
+    let incomeCount = 0;
+    let expenseCount = 0;
+
+    for(let i in filteredList){
+      if(categories[filteredList[i].category].expense){
+        expenseCount += filteredList[i].value;
+      }else {
+        incomeCount += filteredList[i].value;
+      }
+    }
+
+    setIncome(incomeCount);
+    setExpense(expenseCount);
+  }, [filteredList]);
+
 
   // funçaõ que troca o estado do mes
   const handleMonthChange = (newMonth: string) => {
