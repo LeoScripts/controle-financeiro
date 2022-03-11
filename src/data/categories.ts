@@ -1,4 +1,4 @@
-import { Category } from "../styles/Category"
+import { Category } from "../types/Category"
 
 export const categories: Category = {
     foot: {title: 'Alimentação', color:'blue', expense: true},

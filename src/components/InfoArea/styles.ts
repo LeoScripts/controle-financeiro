@@ -7,13 +7,13 @@ export const Container = styled.div`
     padding: 20px;
     margin-top: -40px;
     display: flex;
-    aligin-items: center;
+   
 `;
 
 export const MonthArea = styled.div`
     flex:1;
     display: flex;
-    aligin-items: center;
+    
 `;
 
 export const MonthArrow = styled.div`
@@ -33,6 +33,6 @@ export const MonthTitle = styled.div`
 // esse tera o dobro do espaço do monthArea 
 // por essa razao usamos flex 2
 export const ResumeArea = styled.div`
-    flex:2
+    flex:2;
     display: flex;
 `;
