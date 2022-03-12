@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import * as C from "./App.styles";
 import { Item } from "./types/Item";
-import { Category } from "./types/Category";
 import { items } from "./data/items";
 import { categories } from "./data/categories";
 import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter'
@@ -23,7 +22,7 @@ const App = () => {
     setFilteredList(filterListByMonth(list, currentMonth));
   }, [list,currentMonth])
 
-  useState(() => {
+  useEffect(() => {
     let incomeCount = 0;
     let expenseCount = 0;
 
