@@ -12,8 +12,10 @@ export const Category = styled.div<{ color: string }>`
     border-radius: 5px;
     color: #FFF;
     background-color: ${props => props.color};
+    font-weight: bold;
 `;
 
 export const Value = styled.div<{ color: string }>`
     color: ${props => props.color};
+    
 `;

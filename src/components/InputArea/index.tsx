@@ -10,8 +10,8 @@ export const InputArea = ({onAdd}: Props) => {
 
         // item fixo so pra teste
         let newItem: Item = {
-            date: new Date(2022, 2, 11),
-            category: 'foot',
+            date: new Date(2022, 2, 25),
+            category: 'rend',
             title: 'Item de teste',
             value: 250.25
 
