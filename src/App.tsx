@@ -72,7 +72,7 @@ const App = () => {
 
         {/* tabela de intens */}
         {/* <TableArea  list={filteredList}/> */}
-        <TableArea  list={list}/>
+        <TableArea  list={filteredList}/>
       </C.Body>
     </C.Container>
   );
