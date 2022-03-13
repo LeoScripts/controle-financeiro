@@ -7,11 +7,13 @@ type Props = {
 };
 
 export const InputArea = ({ onAdd }: Props) => {
+    const [dateInput, setDateInput] = useState("")
+
   const handleAddEvent = () => {
     // item fixo so pra teste
     let newItem: Item = {
-      date: new Date(),
-      category: "foot",
+      date: new Date(dateInput),
+      category: "rend",
       title: "Item de teste",
       value: 250.25,
     };
@@ -25,7 +27,13 @@ export const InputArea = ({ onAdd }: Props) => {
     <C.Container>
       <C.Date>
         <label htmlFor="date">Date</label>
-        <input onChange={(e)=> {e.target.value}} type="date" name="date" id="date" />
+        <input
+            onChange={e => setDateInput(e.target.value)} 
+            value={dateInput} 
+            type="date" 
+            name="date" 
+            id="date" 
+        />
       </C.Date>
 
       <button onClick={handleAddEvent}>Adicionar</button>
