@@ -23,7 +23,8 @@ export const InputArea = ({ onAdd }: Props) => {
     };
     onAdd(newItem);
 
-    setDateInput("");
+    setDateInput('');
+    setDescription('');
   };
 
   return (
