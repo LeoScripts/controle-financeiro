@@ -86,3 +86,22 @@ export const Description = styled.div`
     border-radius: 5px;
   }
 `;
+
+export const Price = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+
+
+  label {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  input {
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+`;

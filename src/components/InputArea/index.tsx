@@ -4,27 +4,32 @@ import { useState } from "react";
 
 type Props = {
   onAdd: (item: Item) => void;
+  price: number;
 };
 
 export const InputArea = ({ onAdd }: Props) => {
   const [dateInput, setDateInput] = useState("");
+  const [catereryCurrent, setCatereryCurrent] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState();
 
   const dateCurrent = dateInput.split("-");
   const [year, month, day] = dateCurrent;
-  const [catereryCurrent, setCatereryCurrent] = useState('');
-  const [description, setDescription] = useState('');
+
+
 
   const handleAddEvent = () => {
     let newItem: Item = {
       date: new Date(`${year}-${month}-${parseInt(day) + 1}`),
       category: catereryCurrent,
       title: description,
-      value: 250.25,
+      value: price,
     };
     onAdd(newItem);
 
-    setDateInput('');
-    setDescription('');
+    setDateInput("");
+    setDescription("");
+    setPrice("");
   };
 
   return (
@@ -43,13 +48,15 @@ export const InputArea = ({ onAdd }: Props) => {
 
         <C.Category>
           <label htmlFor="category">Categoria</label>
-          <select 
-            name="category"  
+          <select
+            name="category"
             id="category"
             onChange={(e) => setCatereryCurrent(e.target.value)}
-            defaultValue=''
+            defaultValue=""
           >
-            <option value="" disabled >selecionar</option>
+            <option value="" disabled>
+              selecionar
+            </option>
             <option value="salary">Ganho</option>
             <option value="rend">Despesa</option>
           </select>
@@ -57,14 +64,25 @@ export const InputArea = ({ onAdd }: Props) => {
 
         <C.Description>
           <label htmlFor="decription">Descrição</label>
-          <input 
-            type="text" 
-            name="decription" 
+          <input
+            type="text"
+            name="decription"
             id="decription"
             onChange={(e) => setDescription(e.target.value)}
-            value={description} 
+            value={description}
           />
         </C.Description>
+
+        <C.Price>
+          <label htmlFor="price">Preço</label>
+          <input
+            type="number"
+            name="price"
+            id="price"
+            onChange={(e) => setPrice(e.target.value)}
+            value={price}
+          />
+        </C.Price>
       </C.ContainerInfos>
 
       <button onClick={handleAddEvent}>Adicionar</button>
