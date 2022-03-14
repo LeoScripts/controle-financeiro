@@ -27,6 +27,11 @@ export const Container = styled.div`
     }
 `;
 
+export const ContainerInfos = styled.div`
+    display: flex;
+
+`;
+
 export const Date = styled.div`
     padding:20px;
     display:flex;
@@ -40,6 +45,25 @@ export const Date = styled.div`
     }
 
     input{
+        padding: 5px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+`;
+
+export const Category = styled.div`
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    width: 25%;
+    border-right: solid  3px gray;
+
+    label{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    select{
         padding: 5px;
         margin-top: 10px;
         border-radius: 5px;
