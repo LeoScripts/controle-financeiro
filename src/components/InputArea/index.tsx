@@ -12,12 +12,13 @@ export const InputArea = ({ onAdd }: Props) => {
   const dateCurrent = dateInput.split("-");
   const [year, month, day] = dateCurrent;
   const [catereryCurrent, setCatereryCurrent] = useState('');
+  const [description, setDescription] = useState('');
 
   const handleAddEvent = () => {
     let newItem: Item = {
       date: new Date(`${year}-${month}-${parseInt(day) + 1}`),
       category: catereryCurrent,
-      title: "Item de teste",
+      title: description,
       value: 250.25,
     };
     onAdd(newItem);
@@ -52,6 +53,17 @@ export const InputArea = ({ onAdd }: Props) => {
             <option value="rend">Despesa</option>
           </select>
         </C.Category>
+
+        <C.Description>
+          <label htmlFor="decription">Descrição</label>
+          <input 
+            type="text" 
+            name="decription" 
+            id="decription"
+            onChange={(e) => setDescription(e.target.value)}
+            value={description} 
+          />
+        </C.Description>
       </C.ContainerInfos>
 
       <button onClick={handleAddEvent}>Adicionar</button>
