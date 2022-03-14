@@ -20,9 +20,10 @@ export const InputArea = ({ onAdd }: Props) => {
       value: 250.25,
     };
 
-    console.log()
-
     onAdd(newItem);
+
+
+    setDateInput('');
   };
 
   return (
