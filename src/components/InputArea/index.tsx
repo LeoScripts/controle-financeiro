@@ -9,16 +9,18 @@ type Props = {
 export const InputArea = ({ onAdd }: Props) => {
     const [dateInput, setDateInput] = useState("")
 
+    const dateCurrent = dateInput.split('-')
+    const [year, month, day] = dateCurrent;
+
   const handleAddEvent = () => {
-    // item fixo so pra teste
     let newItem: Item = {
-      date: new Date(dateInput),
+      date: new Date(`${year}-${month}-${parseInt(day) + 1}`),
       category: "rend",
       title: "Item de teste",
       value: 250.25,
     };
 
-    
+    console.log()
 
     onAdd(newItem);
   };
