@@ -23,13 +23,13 @@ export const InputArea = ({ onAdd }: Props) => {
       date: new Date(`${year}-${month}-${parseInt(day) + 1}`),
       category: catereryCurrent,
       title: description,
-      value: price,
+      value: +price,
     };
     onAdd(newItem);
 
     setDateInput("");
     setDescription("");
-    setPrice("");
+    setPrice('');
   };
 
   return (
