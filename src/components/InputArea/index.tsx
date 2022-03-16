@@ -16,8 +16,6 @@ export const InputArea = ({ onAdd }: Props) => {
   const dateCurrent = dateInput.split("-");
   const [year, month, day] = dateCurrent;
 
-
-
   const handleAddEvent = () => {
     let newItem: Item = {
       date: new Date(`${year}-${month}-${parseInt(day) + 1}`),
@@ -29,7 +27,7 @@ export const InputArea = ({ onAdd }: Props) => {
 
     setDateInput("");
     setDescription("");
-    setPrice('');
+    setPrice("");
   };
 
   return (
