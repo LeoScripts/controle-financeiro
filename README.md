@@ -9,13 +9,13 @@
 <h1 align="center">Controle Financeiro</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/LeoScripts/controle-financeiro?color=darkblue">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/LeoScripts/controle-financeiro?color=2A07EB">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/LeoScripts/controle-financeiro?color=darkblue">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/LeoScripts/controle-financeiro?color=2A07EB">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/LeoScripts/controle-financeiro?color=darkblue">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/LeoScripts/controle-financeiro?color=2A07EB">
 
-  <img alt="License" src="https://img.shields.io/github/license/LeoScripts/controle-financeiro?color=darkblue">
+  <img alt="License" src="https://img.shields.io/github/license/LeoScripts/controle-financeiro?color=2A07EB">
 
 
 </p>
